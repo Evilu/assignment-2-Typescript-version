@@ -1,10 +1,10 @@
 import Users from './Programfiles/Users';
-import Groups from './programfiles/groups'
-import Group from './programfiles/group'
+import Groups from './programfiles/groups';
+import Group from './programfiles/group';
 //==========================================================================================================
 //Readline and System files
 //==========================================================================================================
-import * as readline from readline;
+import * as readline from 'readline';
 
 const rl = readline.createInterface({
     input: process.stdin,
