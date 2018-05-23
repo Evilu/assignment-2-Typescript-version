@@ -12,14 +12,10 @@ const rl = readline.createInterface({
 });
 
 
-//junk<>
-//const Groups = require('./Programfiles/groups');
-//const Group = require('./programfiles/group');
 
 const programdata = {
     users: new Users(),
-    groups: new Groups(),
-    Group: new Group()
+    groups: new Groups()
 };
 //==========================================================================================================
 //Main Menu Controller
@@ -197,8 +193,8 @@ const programdata = {
     }
 
     function showGroups(callback) {
-        rl.question('Press Enter to show full tree: \n', (groupName) => {
-            programdata.groups.displayGroups(groupName);
+        rl.question('Press Enter to show full tree: \n', () => {
+            programdata.groups.displayGroups();
             callback()
         })
 
@@ -235,7 +231,7 @@ const programdata = {
 //==========================================================================================================
 //Menu Controllers
     //==========================================================================================================
-    function ShowMenu(menuName) {
+    function ShowMenu(menuName?) {
         const currMenu = menu[menuName || 'main'];
 
         rl.question(initializemenu(currMenu), (answer) => {
