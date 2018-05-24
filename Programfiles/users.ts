@@ -10,8 +10,10 @@ import User from './user';
 //==========================================================================================================
 
 class Users {
+    users: User[];
     constructor() {
-        this.users = {}
+
+        this.users = [];
     }
 
     MakeUser(name, password, age) {

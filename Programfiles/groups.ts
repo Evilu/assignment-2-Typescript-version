@@ -7,7 +7,8 @@ import Group from './group';
 //==========================================================================================================
 
 class groups {
-    public root = new Group('root');
+
+    public root = new Group('root',null);
     constructor() {
 
     }
