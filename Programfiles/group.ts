@@ -15,9 +15,9 @@ class Group {
        name: string ;
        parent: string;
        children: Array<Group>;
-         users: object;
+       users: object;
 
-    constructor(name, parent) {
+    constructor(name:string, parent:string) {
         this.name = name;
         this.parent = parent || null;
         this.children = [];
@@ -46,7 +46,7 @@ class Group {
     }
 
 
-    removeByName(name){
+    removeByName(name: string){
         let index = this.children.findIndex(g => g.name === name)
         if (index > -1) {
             this.children.splice(index, 1)
